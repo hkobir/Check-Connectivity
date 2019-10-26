@@ -14,10 +14,11 @@ public class CheckConnection extends BroadcastReceiver {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         boolean isConnected = networkInfo!=null||networkInfo.isConnectedOrConnecting();
         if(isConnected){
-            Toast.makeText(context,"Back to the on line")
+            Toast.makeText(context,"Back to the on line",Toast.LENGTH_SHORT).show();
         }
         else{
 
+            Toast.makeText(context,"You are offline",Toast.LENGTH_SHORT).show();
         }
     }
 }
